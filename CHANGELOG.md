@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.2.0
+
+[compare changes](https://github.com/eastgold15/vue-split-pane-v3/compare/v1.1.0...v1.2.0)
+
+### 🏡 Chore
+
+- 更新依赖版本并修改CI配置 ([1d87c71](https://github.com/eastgold15/vue-split-pane-v3/commit/1d87c71))
+
+### ❤️ Contributors
+
+- 田正东 <1960825664@qq.com>
+
 ## v1.1.0
 
 [compare changes](https://github.com/eastgold15/vue-split-pane-v3/compare/v1.0.15...v1.1.0)
