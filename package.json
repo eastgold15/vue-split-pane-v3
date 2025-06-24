@@ -1,6 +1,5 @@
 {
-  "name": "pori-split-pane-v3",
-  "private": false,
+  "name": "@pori15/split-pane",
   "version": "1.0.0",
   "description": "A split panel for vue3, using TS",
   "keywords": [
@@ -18,7 +17,8 @@
   "files": [
     "dist",
     "index.d.ts",
-    "README.md"
+    "README.md",
+    "image"
   ],
   "scripts": {
     "dev": "vite --host",

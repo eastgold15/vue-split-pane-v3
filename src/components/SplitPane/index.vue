@@ -144,7 +144,7 @@ const onMouseUp = () => {
 let animationFrameId: number | null = null;
 const onMouseMove = (e: MouseEvent) => {
 	// 检查鼠标按钮状态
-	if (e.buttons === 0 || e.which === 0) {
+	if (e.buttons === 0) {
 		active.value = false;
 	}
 
