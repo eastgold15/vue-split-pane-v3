@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.2.3
+
+[compare changes](https://github.com/eastgold15/vue-split-pane-v3/compare/v1.2.2...v1.2.3)
+
+### 🤖 CI
+
+- **workflow:** 明确指定检出main分支 ([fbe91e6](https://github.com/eastgold15/vue-split-pane-v3/commit/fbe91e6))
+
+### ❤️ Contributors
+
+- 田正东 <1960825664@qq.com>
+
 ## v1.2.2
 
 [compare changes](https://github.com/eastgold15/vue-split-pane-v3/compare/v1.2.1...v1.2.2)
