@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.0.11
+
+[compare changes](https://github.com/eastgold15/vue-split-pane-v3/compare/v1.0.10...v1.0.11)
+
+### 🤖 CI
+
+- 删除release.yml工作流文件 ([4072099](https://github.com/eastgold15/vue-split-pane-v3/commit/4072099))
+
+### ❤️ Contributors
+
+- 田正东 <1960825664@qq.com>
+
 ## v1.0.10
 
 [compare changes](https://github.com/eastgold15/vue-split-pane-v3/compare/v1.0.9...v1.0.10)
