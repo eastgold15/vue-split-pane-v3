@@ -8,8 +8,8 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    Pane: typeof import('./src/components/SplitPane/pane.vue')['default']
-    Resizer: typeof import('./src/components/SplitPane/resizer.vue')['default']
-    SplitPane: typeof import('./src/components/SplitPane/index.vue')['default']
+    Pane: typeof import('./../../src/components/SplitPane/pane.vue')['default']
+    Resizer: typeof import('./../../src/components/SplitPane/resizer.vue')['default']
+    SplitPane: typeof import('./../../src/components/SplitPane/index.vue')['default']
   }
 }

@@ -5,20 +5,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from "vue";
-
+import { computed, ref } from "vue";
 
 const props = defineProps<{
-	
-	split: 'vertical' | 'horizontal';
+	split: "vertical" | "horizontal";
 	className?: string;
 }>();
 
-
-
-
 const classes = computed(() => [props.split, props.className].join(" "));
-const percent = ref(20);
 </script>
 
 <style scoped>

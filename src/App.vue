@@ -39,7 +39,10 @@
 
 <script setup lang="ts">
 import { defineAsyncComponent } from "vue";
-const SplitPane = defineAsyncComponent(() => import("@/components/SplitPane/index.vue"));
+
+const SplitPane = defineAsyncComponent(
+	() => import("@/components/SplitPane/index.vue"),
+);
 </script>
 
 

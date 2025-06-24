@@ -25,7 +25,14 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, defineAsyncComponent, watchEffect, onMounted, onUnmounted } from "vue";
+import {
+	computed,
+	defineAsyncComponent,
+	onMounted,
+	onUnmounted,
+	ref,
+	watchEffect,
+} from "vue";
 
 // 使用异步组件提高初始加载性能
 const Pane = defineAsyncComponent(() => import("./pane.vue"));
@@ -38,16 +45,14 @@ const props = defineProps<{
 	/** 默认分割百分比 */
 	defaultPercent?: number;
 	/** 分割方向：垂直或水平 */
-	split: 'vertical' | 'horizontal';
+	split: "vertical" | "horizontal";
 	/** 自定义类名 */
 	className?: string;
 }>();
 
 // 定义事件
-const emit = defineEmits<{
-	/** 调整大小事件 */
-	(e: 'resize', percent: number): void
-}>();
+type ResizeEvent = (e: "resize", percent: number) => void;
+const emit = defineEmits<ResizeEvent>();
 
 // 状态变量
 const active = ref(false);
@@ -62,18 +67,22 @@ watchEffect(() => {
 });
 
 // 计算属性
-const type = computed(() => props.split === "vertical" ? "width" : "height");
-const resizeType = computed(() => props.split === "vertical" ? "left" : "top");
+const type = computed(() => (props.split === "vertical" ? "width" : "height"));
+const resizeType = computed(() =>
+	props.split === "vertical" ? "left" : "top",
+);
 
 // 计算光标样式
 const cursor = computed(() => {
 	return active.value
-		? (props.split === "vertical" ? "col-resize" : "row-resize")
+		? props.split === "vertical"
+			? "col-resize"
+			: "row-resize"
 		: "";
 });
 
 // 计算用户选择样式
-const userSelect = computed(() => active.value ? "none" : "");
+const userSelect = computed(() => (active.value ? "none" : ""));
 
 // 组合容器样式为一个对象
 const containerStyle = computed(() => {
@@ -128,9 +137,8 @@ const calculateNewPercent = (e: MouseEvent, container: HTMLElement): number => {
 
 	// 计算百分比
 	const currentPage = props.split === "vertical" ? e.pageX : e.pageY;
-	const targetOffset = props.split === "vertical"
-		? container.offsetWidth
-		: container.offsetHeight;
+	const targetOffset =
+		props.split === "vertical" ? container.offsetWidth : container.offsetHeight;
 
 	return Math.floor(((currentPage - offset) / targetOffset) * 10000) / 100;
 };
@@ -152,7 +160,7 @@ const onMouseMove = (e: MouseEvent) => {
 
 	// 在requestAnimationFrame之前保存container引用
 	const container = e.currentTarget as HTMLElement;
-	
+
 	// 使用requestAnimationFrame优化性能
 	if (animationFrameId !== null) {
 		cancelAnimationFrame(animationFrameId);

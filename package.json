@@ -1,44 +1,46 @@
 {
-  "name": "@pori15/split-pane",
-  "version": "1.0.0",
-  "description": "A split panel for vue3, using TS",
-  "keywords": [
-    "SplitPane",
-    "vue3",
-    "分割面板"
-  ],
-  "author": "pori",
-  "license": "MIT",
-  "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/eastgold15/vue-split-pane-v3.git"
-  },
-  "files": [
-    "dist",
-    "index.d.ts",
-    "README.md",
-    "image"
-  ],
-  "scripts": {
-    "dev": "vite --host",
-    "build": " vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "@types/node": "^24.0.3",
-    "@types/vue": "^2.0.0",
-    "@vitejs/plugin-vue": "^6.0.0",
-    "typescript": "^5.8.3",
-    "unplugin-auto-import": "^19.3.0",
-    "unplugin-vue-components": "^28.7.0",
-    "vite": "npm:rolldown-vite@latest",
-    "vue-tsc": "^2.2.10"
-  },
-  "peerDependencies": {
-    "vue": "^3.5.17"
-  },
-  "main": "./src/components/SplitPane/index.vue",
-  "types": "./index.d.ts",
-  "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977"
+	"name": "@pori15/split-pane",
+	"version": "1.0.0",
+	"description": "A split panel for vue3, using TS",
+	"keywords": [
+		"SplitPane",
+		"vue3",
+		"分割面板"
+	],
+	"author": "pori",
+	"license": "MIT",
+	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/eastgold15/vue-split-pane-v3.git"
+	},
+	"files": [
+		"dist",
+		"index.d.ts",
+		"README.md",
+		"image"
+	],
+	"scripts": {
+		"dev": "vite --host",
+		"build": " vite build",
+		"preview": "vite preview",
+		"check": "pnpm exec biome check --write"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.0.0",
+		"@types/node": "^24.0.3",
+		"@types/vue": "^2.0.0",
+		"@vitejs/plugin-vue": "^6.0.0",
+		"typescript": "^5.8.3",
+		"unplugin-auto-import": "^19.3.0",
+		"unplugin-vue-components": "^28.7.0",
+		"vite": "npm:rolldown-vite@latest",
+		"vue-tsc": "^2.2.10"
+	},
+	"peerDependencies": {
+		"vue": "^3.5.17"
+	},
+	"main": "./src/components/SplitPane/index.vue",
+	"types": "./types/index.d.ts",
+	"packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977"
 }

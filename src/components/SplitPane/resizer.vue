@@ -1,16 +1,18 @@
 <template>
-	<div :class="classes"></div>
+	<div :class="_classes"></div>
 </template>
 
 <script setup lang="ts">
 import { computed } from "vue";
+
 const props = defineProps<{
-	split: 'vertical' | 'horizontal';
+	split: "vertical" | "horizontal";
 	className?: string;
 }>();
 
-
-const classes = computed(() => ["splitter-pane-resizer", props.split, props.className].join(" "));
+const _classes = computed(() =>
+	["splitter-pane-resizer", props.split, props.className].join(" "),
+);
 </script>
 
 <style scoped>
