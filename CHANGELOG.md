@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v1.1.0
+
+[compare changes](https://github.com/eastgold15/vue-split-pane-v3/compare/v1.0.15...v1.1.0)
+
+### 🚀 Enhancements
+
+- 添加 split-pane-v3 测试项目基础文件 ([cee6767](https://github.com/eastgold15/vue-split-pane-v3/commit/cee6767))
+
+### 📦 Build
+
+- 配置类型声明生成和构建输出 ([4ca561c](https://github.com/eastgold15/vue-split-pane-v3/commit/4ca561c))
+
+### 🤖 CI
+
+- **workflow:** 修改触发条件为推送v开头的标签 ([ef047ec](https://github.com/eastgold15/vue-split-pane-v3/commit/ef047ec))
+
+### ❤️ Contributors
+
+- 田正东 <1960825664@qq.com>
+
 ## v1.0.15
 
 [compare changes](https://github.com/eastgold15/vue-split-pane-v3/compare/v1.0.14...v1.0.15)
