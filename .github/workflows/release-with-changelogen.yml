@@ -2,8 +2,8 @@ name: Release with Changelogen
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - 'v*'  # 只有推送v开头的标签时才触发
   workflow_dispatch:
     inputs:
       release_type:
