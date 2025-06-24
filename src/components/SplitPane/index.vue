@@ -4,14 +4,8 @@
 			<slot name="paneL"></slot>
 		</Pane>
 
-		<Resizer
-			:className="className"
-			:style="{ [resizeType]: percent + '%' }"
-			:split="props.split"
-			@mousedown.native="onMouseDown"
-			@mouseup="onMouseUp"
-			@click.native="onClick"
-		></Resizer>
+		<Resizer :className="className" :style="{ [resizeType]: percent + '%' }" :split="props.split"
+			@mousedown.native="onMouseDown" @mouseup="onMouseUp" @click.native="onClick"></Resizer>
 
 		<Pane class="splitter-pane splitter-paneR" :split="props.split" :style="{ [type]: 100 - percent + '%' }">
 			<slot name="paneR"></slot>
@@ -25,25 +19,14 @@ import { computed, ref, defineAsyncComponent, watchEffect } from "vue";
 
 const Pane = defineAsyncComponent(() => import("./pane.vue"));
 const Resizer = defineAsyncComponent(() => import("./resizer.vue"));
-const props = defineProps({
-	minPercent: {
-		type: Number,
-		default: 10,
-	},
-	defaultPercent: {
-		type: Number,
-		default: 50,
-	},
-	split: {
-		validator(value) {
-			return ["vertical", "horizontal"].indexOf(value) >= 0;
-		},
-		required: true,
-	},
-	className: {
-		type: String,
-	},
-});
+
+
+const props = defineProps<{
+	minPercent?: number;
+	defaultPercent?: number;
+	split: 'vertical' | 'horizontal';
+	className?: string;
+}>();
 
 const emit = defineEmits();
 
@@ -75,31 +58,32 @@ const onMouseUp = () => {
 };
 
 // 鼠标移动
-const onMouseMove = (e) => {
+const onMouseMove = (e: MouseEvent) => {
 	if (e.buttons === 0 || e.which === 0) {
 		active.value = false;
 	}
 
 	if (active.value) {
 		let offset = 0;
-		let target = e.currentTarget;
+		let target = e.currentTarget as HTMLElement;
 		if (props.split === "vertical") {
 			while (target) {
 				offset += target.offsetLeft;
-				target = target.offsetParent;
+				target = target.offsetParent as HTMLElement;
 			}
 		} else {
 			while (target) {
 				offset += target.offsetTop;
-				target = target.offsetParent;
+				target = target.offsetParent as HTMLElement;
 			}
 		}
 
 		const currentPage = props.split === "vertical" ? e.pageX : e.pageY;
-		const targetOffset = props.split === "vertical" ? e.currentTarget.offsetWidth : e.currentTarget.offsetHeight;
+		const targetOffset = props.split === "vertical" ? (e.currentTarget as HTMLElement).offsetWidth : (e.currentTarget as HTMLElement).offsetHeight;
 		const newPercent = Math.floor(((currentPage - offset) / targetOffset) * 10000) / 100;
+		const minPercent = props.minPercent ?? 10; // 使用空值合并运算符提供默认值
 
-		if (newPercent > props.minPercent && newPercent < 100 - props.minPercent) {
+		if (newPercent > minPercent && newPercent < 100 - minPercent) {
 			percent.value = newPercent;
 		}
 

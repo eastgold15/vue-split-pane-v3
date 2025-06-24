@@ -1,4 +1,7 @@
-# split-pane-v3
+相比原作者，修改了这个问题1
+
+1. 组件库缺少类型声明文件
+2. 测试项目中的模块解析配置不正确# split-pane-v3
 
 [中文文档README.zh_CN.md](./README.zh_CN.md)
 
@@ -6,7 +9,7 @@
 
 ## About
 
--   Split-pane-v3 is a split panel component based on VUE3+TS, this component functions similar to 'vscode' panel splitting, commonly found in online code editors! [According to turn](https://github.com/PanJiaChen/vue-split-pane),this can be understood as the Vue3 version of the project.
+- Split-pane-v3 is a split panel component based on VUE3+TS, this component functions similar to 'vscode' panel splitting, commonly found in online code editors! [According to turn](https://github.com/PanJiaChen/vue-split-pane),this can be understood as the Vue3 version of the project.
 
 ## Get Start
 
@@ -42,8 +45,6 @@ or
 </script>
 ```
 
-> ---
-
 ## Options
 
 | IDX | Name           | Type   | default | explain                                                                      |
@@ -52,8 +53,6 @@ or
 | 2   | defaultPercent | Number | 50      | Default display value of the current panel (%)                               |
 | 3   | split          | String | -       | The display mode of the current panel can be upper or lower or left or right |
 | 4   | class-name     | String | -       | The class name of the split gesture for the current panel                    |
-
-> ---
 
 ## slot
 

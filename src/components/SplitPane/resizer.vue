@@ -4,17 +4,11 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
-const props = defineProps({
-	split: {
-		type: String,
-		validator: (value) => ["vertical", "horizontal"].includes(value),
-		required: true,
-	},
-	className: {
-		type: String,
-		default: "",
-	},
-});
+const props = defineProps<{
+	split: 'vertical' | 'horizontal';
+	className?: string;
+}>();
+
 
 const classes = computed(() => ["splitter-pane-resizer", props.split, props.className].join(" "));
 </script>

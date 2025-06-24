@@ -7,15 +7,15 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 
-const props = defineProps({
-	className: {
-		type: String,
-	},
-	split: {
-		type: String,
-		validator: (value) => ["vertical", "horizontal"].indexOf(value) >= 0,
-	},
-});
+
+const props = defineProps<{
+	
+	split: 'vertical' | 'horizontal';
+	className?: string;
+}>();
+
+
+
 
 const classes = computed(() => [props.split, props.className].join(" "));
 const percent = ref(20);
