@@ -24,13 +24,15 @@
 		"dev": "vite --host",
 		"build": " vite build",
 		"preview": "vite preview",
-		"check": "pnpm exec biome check --write"
+		"check": "pnpm exec biome check --write",
+		"prepare": "lefthook install"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.0.0",
 		"@types/node": "^24.0.3",
 		"@types/vue": "^2.0.0",
 		"@vitejs/plugin-vue": "^6.0.0",
+		"lefthook": "^1.11.14",
 		"typescript": "^5.8.3",
 		"unplugin-auto-import": "^19.3.0",
 		"unplugin-vue-components": "^28.7.0",
