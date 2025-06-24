@@ -1,6 +1,6 @@
 {
 	"name": "@pori15/split-pane",
-	"version": "1.2.5",
+	"version": "1.2.6",
 	"description": "A split panel for vue3, using TS",
 	"keywords": [
 		"SplitPane",
