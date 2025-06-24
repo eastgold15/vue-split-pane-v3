@@ -22,6 +22,8 @@ const libOptions: LibraryOptions = {
 	formats: ["es", "umd"],
 };
 
+// 确保类型定义文件被正确生成和包含
+
 const viteConfig = defineConfig(() => {
 	return {
 		plugins: [
@@ -48,6 +50,10 @@ const viteConfig = defineConfig(() => {
 					},
 				},
 			},
+			// 添加类型声明文件生成配置
+			emitDeclarationOnly: true,
+			declaration: true,
+			declarationDir: "./dist/types",
 		},
 	};
 });

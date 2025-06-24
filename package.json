@@ -16,13 +16,13 @@
 	},
 	"files": [
 		"dist",
-		"index.d.ts",
+		"types",
 		"README.md",
 		"image"
 	],
 	"scripts": {
 		"dev": "vite --host",
-		"build": " vite build",
+		"build": "vite build && vue-tsc --emitDeclarationOnly --outDir dist/types",
 		"preview": "vite preview",
 		"check": "pnpm exec biome check --write",
 		"prepare": "lefthook install",
@@ -45,9 +45,11 @@
 		"vue-tsc": "^2.2.10"
 	},
 	"peerDependencies": {
-		"vue": "^3.5.17"
+		"vue": "^3.4.0 || ^3.5.0"
 	},
-	"main": "./src/components/SplitPane/index.vue",
-	"types": "./types/index.d.ts",
+	"main": "./dist/split-pane-v3.es.js",
+	"module": "./dist/split-pane-v3.es.js",
+	"umd:main": "./dist/split-pane-v3.umd.js",
+	"types": "./dist/types/components/SplitPane/index.vue.d.ts",
 	"packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977"
 }
