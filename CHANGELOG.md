@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.2.1
+
+[compare changes](https://github.com/eastgold15/vue-split-pane-v3/compare/v1.1.1...v1.2.1)
+
+### 🏡 Chore
+
+- **release:** V1.2.0 ([c38a468](https://github.com/eastgold15/vue-split-pane-v3/commit/c38a468))
+
+### ❤️ Contributors
+
+- Pori <1960825664@qq.com>
+
 ## v1.2.0
 
 [compare changes](https://github.com/eastgold15/vue-split-pane-v3/compare/v1.1.0...v1.2.0)
