@@ -1,9 +1,10 @@
 # Changelog
 
 
-## v1.1.1
+## v1.2.0
 
-[compare changes](https://github.com/eastgold15/vue-split-pane-v3/compare/v1.1.0...v1.1.1)
+[compare changes](https://github.com/eastgold15/vue-split-pane-v3/compare/v1.1.0...v1.2.0)
+>>>>>>> c38a468b8200f682559c77a21423018169646822
 
 ### 🏡 Chore
 
