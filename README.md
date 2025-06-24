@@ -15,12 +15,6 @@
 
 > download
 
-`npm install split-pane-v3 --save`
-
-or
-
-`npm i split-pane-v3 -S`
-
 ```html
 <template>
 	<split-pane :min-percent="0" :default-percent="20" split="vertical">

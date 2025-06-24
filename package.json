@@ -1,5 +1,5 @@
 {
-  "name": "split-pane-v3",
+  "name": "pori-split-pane-v3",
   "private": false,
   "version": "1.0.0",
   "description": "A split panel for vue3, using TS",
@@ -13,7 +13,7 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/username/repo.git"
+    "url": "git+https://github.com/eastgold15/vue-split-pane-v3.git"
   },
   "files": [
     "dist",
