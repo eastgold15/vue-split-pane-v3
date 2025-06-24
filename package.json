@@ -25,13 +25,18 @@
 		"build": " vite build",
 		"preview": "vite preview",
 		"check": "pnpm exec biome check --write",
-		"prepare": "lefthook install"
+		"prepare": "lefthook install",
+		"release:patch": "npx changelogen@latest --patch --release --push",
+		"release:minor": "npx changelogen@latest --minor --release --push",
+		"release:major": "npx changelogen@latest --major --release --push",
+		"release:publish": "npx changelogen@latest --patch --release --push --publish"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.0.0",
 		"@types/node": "^24.0.3",
 		"@types/vue": "^2.0.0",
 		"@vitejs/plugin-vue": "^6.0.0",
+		"changelogen": "^0.6.1",
 		"lefthook": "^1.11.14",
 		"typescript": "^5.8.3",
 		"unplugin-auto-import": "^19.3.0",
