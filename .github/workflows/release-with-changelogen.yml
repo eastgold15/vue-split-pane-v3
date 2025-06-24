@@ -25,6 +25,7 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.GIT_TOKEN }}
+          ref: main  # 明确指定检出main分支
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
